@@ -1,7 +1,7 @@
 <div class="container">
-  <div [ngClass]=" lamp.status === statusValue ? onClass : offClass" *ngFor="let lamp of devices.lamps">
+  <div [ngClass]=" lamp.status === statusValue ? onClass : offClass" *ngFor="let lamp of lamps">
     <div class="col s2">
-      <button [ngClass]=" lamp.status === statusValue ? onButton : offButton" (click)="changeStatus(lamp.status)" ><i [ngClass]=" lamp.status === statusValue ? iconOnClass : iconOffClass" >{{iconName(lamp.status)}}</i></button>
+      <button [ngClass]=" lamp.status === statusValue ? onButton : offButton" (click)="changeStatus(lamp,type[0])" ><i [ngClass]=" lamp.status === statusValue ? iconOnClass : iconOffClass" >{{iconName(lamp.status)}}</i></button>
     </div>
     <div class="col s8">
       <div class="row">
@@ -28,9 +28,9 @@
   </div>
 
 
-  <div [ngClass]=" tv.status === statusValue ? onClass : offClass" *ngFor="let tv of devices.tvs">
+  <div [ngClass]=" tv.status === statusValue ? onClass : offClass" *ngFor="let tv of tvs">
     <div class="col s2">
-      <button [ngClass]=" tv.status === statusValue ? onButton : offButton" (click)="changeStatus(tv.status)" ><i [ngClass]=" tv.status === statusValue ? iconOnClass : iconOffClass" >{{iconName(tv.status)}}</i></button>
+      <button [ngClass]=" tv.status === statusValue ? onButton : offButton" (click)="changeStatus(tv,type[1])" ><i [ngClass]=" tv.status === statusValue ? iconOnClass : iconOffClass" >{{iconName(tv.status)}}</i></button>
     </div>
     <div class="col s8">
       <div class="row">
@@ -57,9 +57,9 @@
   </div>
 
 
-  <div [ngClass]=" camera.status === statusValue ? onClass : offClass" *ngFor="let camera of devices.cameras;">
+  <div [ngClass]=" camera.status === statusValue ? onClass : offClass" *ngFor="let camera of cameras;">
     <div class="col s2">
-      <button [ngClass]=" camera.status === statusValue ? onButton : offButton" (click)="changeStatus(camera.status)" ><i [ngClass]=" camera.status === statusValue ? iconOnClass : iconOffClass" >{{iconName(camera.status)}}</i></button>
+      <button [ngClass]=" camera.status === statusValue ? onButton : offButton" (click)="changeStatus(camera,type[2])" ><i [ngClass]=" camera.status === statusValue ? iconOnClass : iconOffClass" >{{iconName(camera.status)}}</i></button>
     </div>
     <div class="col s8">
       <div class="row">
