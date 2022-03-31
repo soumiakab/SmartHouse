@@ -1,9 +1,14 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { House } from 'src/app/core/models/house';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class HouseInfoService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
+  getHouseInfo(){
+    console.log('im in');
+    return this.http.get<House>("http://localhost:3000/house");
+  }
 }

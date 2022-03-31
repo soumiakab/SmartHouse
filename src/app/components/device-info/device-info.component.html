@@ -1,0 +1,30 @@
+<div class="container">
+  <div [class]="containerClass">
+
+    <div class="col s2">
+      <button [class]="butttonClass"(click)="changeStatus()" ><i [class]="iconClass">{{iconName}}</i></button>
+    </div>
+    <div class="col s8">
+      <div class="row">
+        <div class="col s12">
+          device:
+        </div>
+        <div class="col s12">
+          Room:2
+        </div>
+        <div class="col s12">
+          Floor:2
+        </div>
+        <div class="col s12">
+          Status:{{statusValue}}
+        </div>
+      </div>
+
+    </div>
+    <div class="col s2">
+      <button class="btn-floating btn-large pink"><i class="material-icons">delete</i></button><br />
+      <a>More information</a>
+    </div>
+
+  </div>
+</div>

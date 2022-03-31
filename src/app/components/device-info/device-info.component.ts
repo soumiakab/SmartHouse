@@ -1,15 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { House } from 'src/app/core/models/house';
+import { HouseInfoService } from 'src/app/services/house-service/house-info.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-device-info',
+  templateUrl: './device-info.component.html',
+  styleUrls: ['./device-info.component.css']
 })
-export class AppComponent {
+export class DeviceInfoComponent implements OnInit {
 
+  house:House | undefined;
+  constructor(private houseService: HouseInfoService){
+  }
 
+  async ngOnInit():Promise<void>{
+    await this.getHouseInfo();
+    console.log(this.house);
+  }
 
+   async getHouseInfo(){
+    this.houseService.getHouseInfo().subscribe(houseInfo =>{console.log(houseInfo);this.house = houseInfo});
 
+  }
 
   status=true;
   onClass="row card-panel card-panel green lighten-4 valign-wrapper";

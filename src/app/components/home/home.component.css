@@ -1,0 +1,16 @@
+.homecontainer{
+  margin: 0px;
+  padding-top: 10%;
+}
+.housePicContainer{
+  min-height: 93vh;
+}
+.housePic{
+  background-image: url("../../../assets/images/smrt3.png");
+    /* background-repeat: no-repeat; */
+    object-fit: fill;
+    min-height: 40vh;
+    width: 60%;
+    margin-left: 20%;
+
+}
