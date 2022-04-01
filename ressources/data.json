@@ -284,5 +284,22 @@
       "status":"OFF",
       "number":5
     }
+  ],
+  "users":[
+    {
+      "id":1,
+      "userName":"username",
+      "password":"password"
+    },
+    {
+      "id":2,
+      "userName":"username2",
+      "password":"password2"
+    },
+    {
+      "id":3,
+      "userName":"username3",
+      "password":"password3"
+    }
   ]
 }

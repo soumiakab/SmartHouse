@@ -1,5 +1,5 @@
 <div class="container">
-  <div [ngClass]=" lamp.status === statusValue ? onClass : offClass" *ngFor="let lamp of lamps">
+  <div [ngClass]=" lamp.status === statusValue ? onClass : offClass" *ngFor="let lamp of lamps; index as i">
     <div class="col s2">
       <button [ngClass]=" lamp.status === statusValue ? onButton : offButton" (click)="changeStatus(lamp,type[0])" ><i [ngClass]=" lamp.status === statusValue ? iconOnClass : iconOffClass" >{{iconName(lamp.status)}}</i></button>
     </div>
@@ -21,14 +21,14 @@
 
     </div>
     <div class="col s2">
-      <button class="btn-floating btn-large pink"><i class="material-icons">delete</i></button><br />
+      <button class="btn-floating btn-large pink" (click)="deleteDevice(lamp,type[0],i)"><i class="material-icons">delete</i></button><br />
       <a>More informations</a>
     </div>
 
   </div>
 
 
-  <div [ngClass]=" tv.status === statusValue ? onClass : offClass" *ngFor="let tv of tvs">
+  <div [ngClass]=" tv.status === statusValue ? onClass : offClass" *ngFor="let tv of tvs; index as i">
     <div class="col s2">
       <button [ngClass]=" tv.status === statusValue ? onButton : offButton" (click)="changeStatus(tv,type[1])" ><i [ngClass]=" tv.status === statusValue ? iconOnClass : iconOffClass" >{{iconName(tv.status)}}</i></button>
     </div>
@@ -50,14 +50,14 @@
 
     </div>
     <div class="col s2">
-      <button class="btn-floating btn-large pink"><i class="material-icons">delete</i></button><br />
+      <button class="btn-floating btn-large pink" (click)="deleteDevice(tv,type[1],i)"><i class="material-icons">delete</i></button><br />
       <a>More information</a>
     </div>
 
   </div>
 
 
-  <div [ngClass]=" camera.status === statusValue ? onClass : offClass" *ngFor="let camera of cameras;">
+  <div [ngClass]=" camera.status === statusValue ? onClass : offClass" *ngFor="let camera of cameras; index as i;">
     <div class="col s2">
       <button [ngClass]=" camera.status === statusValue ? onButton : offButton" (click)="changeStatus(camera,type[2])" ><i [ngClass]=" camera.status === statusValue ? iconOnClass : iconOffClass" >{{iconName(camera.status)}}</i></button>
     </div>
@@ -79,7 +79,7 @@
 
     </div>
     <div class="col s2">
-      <button class="btn-floating btn-large pink"><i class="material-icons">delete</i></button><br />
+      <button class="btn-floating btn-large pink"  (click)="deleteDevice(camera,type[2],i)"><i class="material-icons">delete</i></button><br />
       <a>More information</a>
     </div>
 

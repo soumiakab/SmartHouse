@@ -22,7 +22,7 @@ export class ContainerComponent implements OnInit {
   tvs:Tv[] =[];
   cameras:Camera[] = [];
 
-   type: DeviceEnum[] = [DeviceEnum.Lamp,DeviceEnum.CAMERA,DeviceEnum.TV];
+   type: DeviceEnum[] = [DeviceEnum.Lamp,DeviceEnum.TV,DeviceEnum.CAMERA];
 
 
   constructor(private deviceService: DeviceService, private lampService: LampService,private tvService: TvService,private cameraService: CameraService){
@@ -68,9 +68,29 @@ export class ContainerComponent implements OnInit {
         this.cameraService.updateCamera(object as Camera);
         break;
     }
-    //this.getDevices();
+  }
+
+  deleteDevice(object:any,type:DeviceEnum,i:number){
+
+    switch(type){
+      case DeviceEnum.Lamp:
+        this.lampService.deleteLamp((object as Lamp).id);
+        this.lamps = this.lamps.filter(item => item.id != (object as Lamp).id);
+        //console.logdelete this.lamps[i];
+        break;
+      case DeviceEnum.TV:
+        this.tvService.deleteTv((object as Tv).id);
+        this.tvs = this.tvs.filter(item => item.id != (object as Tv).id);
+        break;
+      case DeviceEnum.CAMERA:
+        this.cameraService.deleteCamera((object as Camera).id);
+        this.cameras = this.cameras.filter(item => item.id != (object as Camera).id);
+        break;
+    }
 
   }
+
+
   iconName(status:StatusEnum){
     if(status==StatusEnum.ON) {
       return this.onIcon;

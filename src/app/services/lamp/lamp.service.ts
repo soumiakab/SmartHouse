@@ -11,7 +11,7 @@ export class LampService {
   constructor(private http: HttpClient) { }
 
   getLamps(){
-    return this.http.get<Lamp[]>("http://localhost:3000/lamps");
+    return this.http.get<Lamp[]>(this.url);
   }
 
   addLamp(lamp:Lamp){
@@ -19,7 +19,7 @@ export class LampService {
   }
 
   deleteLamp(id:number){
-    return this.http.delete(`${this.url}/${id}`);
+    return this.http.delete(`${this.url}/${id}`).subscribe(data =>console.log(data));
   }
 
   getLamp(id:number){
