@@ -4,27 +4,12 @@
       <app-button-turn [status]="lamp.status" (changestatusEvent)="changeStatus(lamp,type[0])"></app-button-turn>
     </div>
     <div class="col s8">
-      <div class="row">
-        <div class="col s12">
-          device:Lamp
-        </div>
-        <div class="col s12">
-          Room:
-        </div>
-        <div class="col s12">
-          Floor:
-        </div>
-        <div class="col s12">
-          Status:{{lamp.status}}
-        </div>
-      </div>
-
+      <app-device-info [device]="lamp"></app-device-info>
     </div>
     <div class="col s2">
       <button class="btn-floating btn-large pink" (click)="deleteDevice(lamp,type[0],i)"><i class="material-icons">delete</i></button><br />
       <a>More informations</a>
     </div>
-
   </div>
 
 
@@ -33,21 +18,7 @@
       <button [ngClass]=" tv.status === statusValue ? onButton : offButton" (click)="changeStatus(tv,type[1])" ><i [ngClass]=" tv.status === statusValue ? iconOnClass : iconOffClass" >{{iconName(tv.status)}}</i></button>
     </div>
     <div class="col s8">
-      <div class="row">
-        <div class="col s12">
-          device:TV
-        </div>
-        <div class="col s12">
-          Room:
-        </div>
-        <div class="col s12">
-          Floor:
-        </div>
-        <div class="col s12">
-          Status:{{tv.status}}
-        </div>
-      </div>
-
+      <app-device-info [device]="tv"></app-device-info>
     </div>
     <div class="col s2">
       <button class="btn-floating btn-large pink" (click)="deleteDevice(tv,type[1],i)"><i class="material-icons">delete</i></button><br />
@@ -62,20 +33,7 @@
       <button [ngClass]=" camera.status === statusValue ? onButton : offButton" (click)="changeStatus(camera,type[2])" ><i [ngClass]=" camera.status === statusValue ? iconOnClass : iconOffClass" >{{iconName(camera.status)}}</i></button>
     </div>
     <div class="col s8">
-      <div class="row">
-        <div class="col s12">
-          device:CAMERA
-        </div>
-        <div class="col s12">
-          Room:
-        </div>
-        <div class="col s12">
-          Floor:
-        </div>
-        <div class="col s12">
-          Status:{{camera.status}}
-        </div>
-      </div>
+      <app-device-info [device]="camera"></app-device-info>
 
     </div>
     <div class="col s2">

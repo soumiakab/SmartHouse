@@ -5,5 +5,5 @@ export interface House{
   name: string;
   address:string;
   user:User;
-  floors: Floor[];
+  floors?: Floor[];
 }
