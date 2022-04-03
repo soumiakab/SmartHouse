@@ -1,45 +1,69 @@
 <div class="container">
-  <div [ngClass]=" lamp.status === statusValue ? onClass : offClass" *ngFor="let lamp of lamps; index as i">
-    <div class="col s2">
-      <app-button-turn [status]="lamp.status" (changestatusEvent)="changeStatus(lamp,type[0])"></app-button-turn>
-    </div>
-    <div class="col s8">
-      <app-device-info [device]="lamp"></app-device-info>
-    </div>
-    <div class="col s2">
-      <button class="btn-floating btn-large pink" (click)="deleteDevice(lamp,type[0],i)"><i class="material-icons">delete</i></button><br />
-      <a>More informations</a>
-    </div>
-  </div>
+  <ul class="collapsible" data-collapsible="accordion" materialize="collapsible">
+    <li>
+      <div class="collapsible-header">
+        <i class="material-icons">tungsten</i>
+        Lamp
+        <span class="badge">{{lamps.length}}</span></div>
+      <div class="collapsible-body">
+        <div [ngClass]=" lamp.status === statusValue ? onClass : offClass" *ngFor="let lamp of lamps; index as i">
+          <div class="col s2">
+            <app-button-turn [status]="lamp.status" (changestatusEvent)="changeStatus(lamp,type[0])"></app-button-turn>
+          </div>
+          <div class="col s8">
+            <app-device-info [device]="lamp"></app-device-info>
+          </div>
+          <div class="col s2">
+            <button class="btn-floating btn-large pink" (click)="deleteDevice(lamp,type[0],i)"><i class="material-icons">delete</i></button><br />
+            <a>More informations</a>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header">
+        <i class="material-icons">live_tv</i>
+        tvs
+        <span class="badge">{{tvs.length}}</span></div>
+      <div class="collapsible-body">
+        <div [ngClass]=" tv.status === statusValue ? onClass : offClass" *ngFor="let tv of tvs; index as i">
+          <div class="col s2">
+            <button [ngClass]=" tv.status === statusValue ? onButton : offButton" (click)="changeStatus(tv,type[1])" ><i [ngClass]=" tv.status === statusValue ? iconOnClass : iconOffClass" >{{iconName(tv.status)}}</i></button>
+          </div>
+          <div class="col s8">
+            <app-device-info [device]="tv"></app-device-info>
+          </div>
+          <div class="col s2">
+            <button class="btn-floating btn-large pink" (click)="deleteDevice(tv,type[1],i)"><i class="material-icons">delete</i></button><br />
+            <a>More information</a>
+          </div>
 
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header">
+        <i class="material-icons">videocam</i>
+        Cameras
+        <span class="badge">{{cameras.length}}</span></div>
+      <div class="collapsible-body">
+        <div [ngClass]=" camera.status === statusValue ? onClass : offClass" *ngFor="let camera of cameras; index as i;">
+          <div class="col s2">
+            <button [ngClass]=" camera.status === statusValue ? onButton : offButton" (click)="changeStatus(camera,type[2])" ><i [ngClass]=" camera.status === statusValue ? iconOnClass : iconOffClass" >{{iconName(camera.status)}}</i></button>
+          </div>
+          <div class="col s8">
+            <app-device-info [device]="camera"></app-device-info>
 
-  <div [ngClass]=" tv.status === statusValue ? onClass : offClass" *ngFor="let tv of tvs; index as i">
-    <div class="col s2">
-      <button [ngClass]=" tv.status === statusValue ? onButton : offButton" (click)="changeStatus(tv,type[1])" ><i [ngClass]=" tv.status === statusValue ? iconOnClass : iconOffClass" >{{iconName(tv.status)}}</i></button>
-    </div>
-    <div class="col s8">
-      <app-device-info [device]="tv"></app-device-info>
-    </div>
-    <div class="col s2">
-      <button class="btn-floating btn-large pink" (click)="deleteDevice(tv,type[1],i)"><i class="material-icons">delete</i></button><br />
-      <a>More information</a>
-    </div>
+          </div>
+          <div class="col s2">
+            <button class="btn-floating btn-large pink"  (click)="deleteDevice(camera,type[2],i)"><i class="material-icons">delete</i></button><br />
+            <a>More information</a>
+          </div>
 
-  </div>
-
-
-  <div [ngClass]=" camera.status === statusValue ? onClass : offClass" *ngFor="let camera of cameras; index as i;">
-    <div class="col s2">
-      <button [ngClass]=" camera.status === statusValue ? onButton : offButton" (click)="changeStatus(camera,type[2])" ><i [ngClass]=" camera.status === statusValue ? iconOnClass : iconOffClass" >{{iconName(camera.status)}}</i></button>
-    </div>
-    <div class="col s8">
-      <app-device-info [device]="camera"></app-device-info>
-
-    </div>
-    <div class="col s2">
-      <button class="btn-floating btn-large pink"  (click)="deleteDevice(camera,type[2],i)"><i class="material-icons">delete</i></button><br />
-      <a>More information</a>
-    </div>
-
-  </div>
+        </div>
+      </div>
+    </li>
+  </ul>
 </div>
+
+

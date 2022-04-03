@@ -5,7 +5,7 @@ import { SignInComponent } from './components/auth/sign-in/sign-in.component';
 import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
-{path: 'app', component: ContainerComponent},
+{path: 'devices', component: ContainerComponent},
 {path: '', component: HomeComponent},
 {path: 'auth/sign-in', component: SignInComponent},
 {path: 'home', component: HomeComponent}
