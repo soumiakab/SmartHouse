@@ -1,16 +1,28 @@
 .homecontainer{
   margin: 0px;
-  padding-top: 10%;
+  /*padding-top: 10%;*/
 }
-.housePicContainer{
-  min-height: 93vh;
+.homecontainer{
+  min-height: 100vh;
+  background-color: aliceblue;
+}
+.homeparagraph{
+  width: 80%;
+}
+.title{
+  color: #ee8454;
+  font-size: 7rem;
+}
+.signinButton{
+  font-size: larger;
+    font-weight: bold;
 }
 .housePic{
-  background-image: url("../../../assets/images/smrt3.png");
-    /* background-repeat: no-repeat; */
-    object-fit: fill;
-    min-height: 40vh;
-    width: 60%;
-    margin-left: 20%;
+  background-image: url("../../../assets/images/houseSmart.png");
+  background-repeat: no-repeat;
+  object-fit: fill;
+  min-height: 40vh;
+  width: 80%;
+  margin-left: 20%;
 
 }

@@ -1,1 +1,1 @@
-<p>button-turn works!</p>
+<button [ngClass]="status === stausOn ? onButton : offButton" (click)="changeStatus()" ><i [ngClass]="status === stausOn ? iconOnClass : iconOffClass" >{{iconName(status)}}</i></button>

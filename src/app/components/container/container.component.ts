@@ -71,7 +71,6 @@ export class ContainerComponent implements OnInit {
   }
 
   deleteDevice(object:any,type:DeviceEnum,i:number){
-
     switch(type){
       case DeviceEnum.Lamp:
         this.lampService.deleteLamp((object as Lamp).id);

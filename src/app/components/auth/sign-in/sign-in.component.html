@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 <div class="row authcontainer">
 <div class="conainer">
-  <form [formGroup]="loginForm" (ngSubmit)="login()">
+  <form class="formconainer" [formGroup]="loginForm" (ngSubmit)="login()">
     <div class="card-panel z-depth-5">
         <div class="row margin">
             <div class="col s12 m12 l12 center">
@@ -30,12 +30,12 @@
         <div class="center">
             <input type="submit" value="Login" name="login"
             class="btn"
-            style="width:70%; color:white; font-weight:bold; background-color: #0c9d8cd9;">
+            style="width:70%; color:white; font-weight:bold; background-color: #4dd0e1;">
         </div>
 
     </div>
   </form>
-  <div *ngIf="loginError">
+  <div *ngIf="loginError" class="center error-message">
     <span>{{ loginError }}</span>
 </div>
 

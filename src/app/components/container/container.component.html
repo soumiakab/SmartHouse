@@ -1,7 +1,7 @@
 <div class="container">
   <div [ngClass]=" lamp.status === statusValue ? onClass : offClass" *ngFor="let lamp of lamps; index as i">
     <div class="col s2">
-      <button [ngClass]=" lamp.status === statusValue ? onButton : offButton" (click)="changeStatus(lamp,type[0])" ><i [ngClass]=" lamp.status === statusValue ? iconOnClass : iconOffClass" >{{iconName(lamp.status)}}</i></button>
+      <app-button-turn [status]="lamp.status" (changestatusEvent)="changeStatus(lamp,type[0])"></app-button-turn>
     </div>
     <div class="col s8">
       <div class="row">
