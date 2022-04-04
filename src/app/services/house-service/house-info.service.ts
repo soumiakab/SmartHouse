@@ -8,7 +8,6 @@ export class HouseInfoService {
   constructor(private http: HttpClient) { }
 
   getHouseInfo(){
-    console.log('im in');
     return this.http.get<House>("http://localhost:3000/house");
   }
 }

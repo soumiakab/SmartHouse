@@ -1,5 +1,5 @@
 {
-  "house": {
+  "houses": [{
     "id": 1,
     "name": "FamilyHouse",
     "address": "X street address",
@@ -120,90 +120,567 @@
         ]
       }
     ]
+  }],
+  "house": {
+    "id": 1,
+    "name": "FamilyHouse",
+    "address": "X street address",
+    "user": {
+      "userName": "username"
+    }
+  },
+  "houseDetails": {
+    "id": 1,
+    "name": "FamilyHouse",
+    "address": "X street address",
+    "user": {
+      "id": 1,
+      "userName": "username",
+      "password": "password"
+    },
+    "floors": [
+      {
+        "number": 1,
+        "rooms": [
+          {
+            "id": 1,
+            "number": 1,
+            "lamps": [
+              {
+                "id": 1,
+                "status": "ON",
+                "number": 1
+              }
+            ],
+            "tvs": [
+              {
+                "id": 1,
+                "status": "ON",
+                "number": 1
+              }
+            ],
+            "cameras": [
+              {
+                "id": 1,
+                "status": "ON",
+                "number": 1
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "number": 2,
+            "lamps": [
+              {
+                "id": 2,
+                "status": "ON",
+                "number": 2
+              }
+            ],
+            "tvs": [
+              {
+                "id": 2,
+                "status": "ON",
+                "number": 2
+              }
+            ],
+            "cameras": [
+              {
+                "id": 3,
+                "status": "ON",
+                "number": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": 2,
+        "rooms": [
+          {
+            "id": 3,
+            "number": 3,
+            "lamps": [
+              {
+                "id": 3,
+                "status": "ON",
+                "number": 3
+              }
+            ],
+            "tvs": [
+              {
+                "id": 3,
+                "status": "ON",
+                "number": 3
+              }
+            ],
+            "cameras": [
+              {
+                "id": 3,
+                "status": "ON",
+                "number": 3
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "number": 4,
+            "lamps": [
+              {
+                "id": 5,
+                "status": "ON",
+                "number": 5
+              }
+            ],
+            "tvs": [
+              {
+                "id": 5,
+                "status": "OFF",
+                "number": 5
+              }
+            ],
+            "cameras": [
+              {
+                "id": 5,
+                "status": "OFF",
+                "number": 5
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "devices": {
+      "lamps": [
+        {
+          "id": 1,
+          "status": "ON",
+          "number": 1,
+          "type": "Lamp",
+          "room":{
+              "id": 3,
+              "number": 3,
+              "name":"bedroom"
+          },
+          "floor":{
+            "id": 3,
+            "number": 3,
+            "name":"Floor3"
+          }
+        },
+        {
+          "id": 2,
+          "status": "ON",
+          "number": 2,
+          "type": "Lamp",
+          "room":{
+              "id": 4,
+              "number": 4,
+              "name":"bedroom"
+          },
+          "floor":{
+            "id": 2,
+            "number": 2,
+            "name":"Floor2"
+          }
+        },
+        {
+          "id": 3,
+          "status": "OFF",
+          "number": 3,
+          "type": "Lamp",
+          "room":{
+              "id": 3,
+              "number": 3,
+              "name":"living room"
+          },
+          "floor":{
+            "id": 3,
+            "number": 3,
+            "name":"Floor3"
+          }
+        },
+        {
+          "id": 4,
+          "status": "ON",
+          "number": 4,
+          "type": "Lamp",
+          "room":{
+              "id": 1,
+              "number": 1,
+              "name":"house entry"
+          },
+          "floor":{
+            "id": 1,
+            "number": 1,
+            "name":"Floor1"
+          }
+        },
+        {
+          "id": 5,
+          "status": "OFF",
+          "number": 5,
+          "type": "Lamp",
+          "room":{
+              "id": 3,
+              "number": 3,
+              "name":"living room"
+          },
+          "floor":{
+            "id": 3,
+            "number": 3,
+            "name":"Floor3"
+          }
+        }
+      ],
+      "tvs": [
+        {
+          "id": 1,
+          "status": "ON",
+          "number": 1,
+          "type": "Tv",
+          "room":{
+              "id": 3,
+              "number": 3,
+              "name":"living room"
+          },
+          "floor":{
+            "id": 3,
+            "number": 3,
+            "name":"Floor3"
+          }
+        },
+        {
+          "id": 2,
+          "status": "ON",
+          "number": 2,
+          "type": "Tv",
+          "room":{
+              "id": 2,
+              "number": 2,
+              "name":"bedroom"
+          },
+          "floor":{
+            "id": 2,
+            "number": 2,
+            "name":"Floor2"
+          }
+        },
+        {
+          "id": 3,
+          "status": "OFF",
+          "number": 3,
+          "type": "Tv",
+          "room":{
+              "id": 3,
+              "number": 3,
+              "name":"room1"
+          },
+          "floor":{
+            "id": 4,
+            "number": 4,
+            "name":"Floor4"
+          }
+        }
+      ],
+      "cameras": [
+        {
+          "id": 1,
+          "status": "ON",
+          "number": 1,
+          "type": "Camera",
+          "room":{
+              "id": 3,
+              "number": 3,
+              "name":"House entry"
+          },
+          "floor":{
+            "id": 1,
+            "number": 1,
+            "name":"Floor1"
+          }
+        },
+        {
+          "id": 2,
+          "status": "ON",
+          "number": 2,
+          "type": "Camera",
+          "room":{
+              "id": 3,
+              "number": 3,
+              "name":"House entry"
+          },
+          "floor":{
+            "id": 1,
+            "number": 1,
+            "name":"Floor1"
+          }
+        },
+        {
+          "id": 3,
+          "status": "OFF",
+          "number": 3,
+          "type": "Camera",
+          "room":{
+              "id": 3,
+              "number": 3,
+              "name":"living room"
+          },
+          "floor":{
+            "id": 1,
+            "number": 1,
+            "name":"Floor1"
+          }
+        },
+        {
+          "id": 4,
+          "status": "ON",
+          "number": 4,
+          "type": "Camera",
+          "room":{
+              "id": 2,
+              "number": 2,
+              "name":"room2"
+          },
+          "floor":{
+            "id": 2,
+            "number": 2,
+            "name":"Floor2"
+          }
+        },
+        {
+          "id": 5,
+          "status": "OFF",
+          "number": 5,
+          "type": "Camera",
+          "room":{
+              "id": 3,
+              "number": 3,
+              "name":"room3"
+          },
+          "floor":{
+            "id": 3,
+            "number": 3,
+            "name":"Floor3"
+          }
+        }
+    ]}
   },
   "devices": {
     "lamps": [
       {
         "id": 1,
         "status": "ON",
-        "number": 1
+        "number": 1,
+        "type": "Lamp",
+        "room":{
+            "id": 3,
+            "number": 3,
+            "name":"bedroom"
+        },
+        "floor":{
+          "id": 3,
+          "number": 3,
+          "name":"Floor3"
+        }
       },
       {
         "id": 2,
         "status": "ON",
-        "number": 2
+        "number": 2,
+        "type": "Lamp",
+        "room":{
+            "id": 4,
+            "number": 4,
+            "name":"bedroom"
+        },
+        "floor":{
+          "id": 2,
+          "number": 2,
+          "name":"Floor2"
+        }
       },
       {
         "id": 3,
         "status": "OFF",
-        "number": 3
+        "number": 3,
+        "type": "Lamp",
+        "room":{
+            "id": 3,
+            "number": 3,
+            "name":"living room"
+        },
+        "floor":{
+          "id": 3,
+          "number": 3,
+          "name":"Floor3"
+        }
       },
       {
         "id": 4,
         "status": "ON",
-        "number": 4
+        "number": 4,
+        "type": "Lamp",
+        "room":{
+            "id": 1,
+            "number": 1,
+            "name":"house entry"
+        },
+        "floor":{
+          "id": 1,
+          "number": 1,
+          "name":"Floor1"
+        }
       },
       {
         "id": 5,
         "status": "OFF",
-        "number": 5
+        "number": 5,
+        "type": "Lamp",
+        "room":{
+            "id": 3,
+            "number": 3,
+            "name":"living room"
+        },
+        "floor":{
+          "id": 3,
+          "number": 3,
+          "name":"Floor3"
+        }
       }
     ],
     "tvs": [
       {
         "id": 1,
         "status": "ON",
-        "number": 1
+        "number": 1,
+        "type": "Tv",
+        "room":{
+            "id": 3,
+            "number": 3,
+            "name":"living room"
+        },
+        "floor":{
+          "id": 3,
+          "number": 3,
+          "name":"Floor3"
+        }
       },
       {
         "id": 2,
         "status": "ON",
-        "number": 2
+        "number": 2,
+        "type": "Tv",
+        "room":{
+            "id": 2,
+            "number": 2,
+            "name":"bedroom"
+        },
+        "floor":{
+          "id": 2,
+          "number": 2,
+          "name":"Floor2"
+        }
       },
       {
         "id": 3,
         "status": "OFF",
-        "number": 3
-      },
-      {
-        "id": 4,
-        "status": "ON",
-        "number": 4
-      },
-      {
-        "id": 5,
-        "status": "OFF",
-        "number": 5
+        "number": 3,
+        "type": "Tv",
+        "room":{
+            "id": 3,
+            "number": 3,
+            "name":"room1"
+        },
+        "floor":{
+          "id": 4,
+          "number": 4,
+          "name":"Floor4"
+        }
       }
     ],
     "cameras": [
       {
         "id": 1,
         "status": "ON",
-        "number": 1
+        "number": 1,
+        "type": "Camera",
+        "room":{
+            "id": 3,
+            "number": 3,
+            "name":"House entry"
+        },
+        "floor":{
+          "id": 1,
+          "number": 1,
+          "name":"Floor1"
+        }
       },
       {
         "id": 2,
         "status": "ON",
-        "number": 2
+        "number": 2,
+        "type": "Camera",
+        "room":{
+            "id": 3,
+            "number": 3,
+            "name":"House entry"
+        },
+        "floor":{
+          "id": 1,
+          "number": 1,
+          "name":"Floor1"
+        }
       },
       {
         "id": 3,
         "status": "OFF",
-        "number": 3
+        "number": 3,
+        "type": "Camera",
+        "room":{
+            "id": 3,
+            "number": 3,
+            "name":"living room"
+        },
+        "floor":{
+          "id": 1,
+          "number": 1,
+          "name":"Floor1"
+        }
       },
       {
         "id": 4,
         "status": "ON",
-        "number": 4
+        "number": 4,
+        "type": "Camera",
+        "room":{
+            "id": 2,
+            "number": 2,
+            "name":"room2"
+        },
+        "floor":{
+          "id": 2,
+          "number": 2,
+          "name":"Floor2"
+        }
       },
       {
         "id": 5,
         "status": "OFF",
-        "number": 5
+        "number": 5,
+        "type": "Camera",
+        "room":{
+            "id": 3,
+            "number": 3,
+            "name":"room3"
+        },
+        "floor":{
+          "id": 3,
+          "number": 3,
+          "name":"Floor3"
+        }
       }
-    ]
-  },
+  ]},
   "lamps": [
     {
       "id": 1,

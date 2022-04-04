@@ -33,7 +33,7 @@ export class SignInComponent implements OnInit {
 
         if(users.length>0){
           this.loginError=null;
-          this.router.navigate(['app'])
+          this.router.navigate(['devices'])
         }
         else{
           this.loginForm.reset();
